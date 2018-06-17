@@ -14,7 +14,14 @@ async function requestStatus(email, orderNumber) {
   const data = new FormData();
   data.append('email', email);
   data.append('order_number', orderNumber);
-  const response = await got.post(URL_PROD_QUERY, { body: data });
+  const response = await got.post(URL_PROD_QUERY, {
+    body: data,
+    headers: {
+      Host: 'tracker.onewheel.com',
+      Origin: 'https://onewheel.com',
+      Referer: 'https://onewheel.com/pages/dude-wheres-my-onewheel',
+    },
+  });
   const body = JSON.parse(response.body);
   if (body.status !== 'success') {
     throw new Error(`Onewheel tracker error: ${body.error_message}`);
