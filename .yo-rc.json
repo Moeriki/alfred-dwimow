@@ -1,0 +1,8 @@
+{
+  "generator-alfred": {
+    "promptValues": {
+      "githubUsername": "moeriki",
+      "website": "https://github.com/moeriki/alfred-dwimow"
+    }
+  }
+}

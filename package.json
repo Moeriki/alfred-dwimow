@@ -1,0 +1,40 @@
+{
+  "name": "alfred-dwimow",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Dieter Luypaert",
+    "email": "dieterluypaert@gmail.com",
+    "url": "https://github.com/moeriki/alfred-dwimow"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "lint": "eslint *.js",
+    "test": "npm run lint",
+    "postinstall": "alfy-init",
+    "preuninstall": "alfy-cleanup"
+  },
+  "dependencies": {
+    "alfy": "^0.6.0",
+    "date-fns": "^1.29.0",
+    "form-data": "^2.3.2",
+    "got": "^8.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.12.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb-base",
+      "prettier"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2017
+    }
+  }
+}
